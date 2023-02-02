@@ -1,0 +1,92 @@
+@import 'variables';
+
+.delicious {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 135px 0;
+
+    * {
+        z-index: 10;
+    }
+
+    &-lines {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        width: 1000px;
+        height: 625px;
+        z-index: 0;
+    }
+
+    &-container {
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-photo {
+        position: relative;
+        width: 465px;
+        height: 684px;
+        background: #237249;
+
+        img {
+            position: absolute;
+            bottom: -50px;
+            left: -30px;
+            width: 600px;
+            height: 800px;
+        }
+
+        .we_have {
+            position: absolute;
+            top: -25px;
+            right: -70px;
+            z-index: 100;
+        }
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 470px;
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 88px;
+        color: white;
+    }
+
+    &-description {
+        font-size: 20px;
+        line-height: 33px;
+        color: white;
+    }
+
+    &-clip {
+        width: 450px;
+        height: 275px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('../img/delicious-clip.png') center center no-repeat;
+        background-size: contain;
+
+        &-button {
+            padding: 23px 43px;
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+}

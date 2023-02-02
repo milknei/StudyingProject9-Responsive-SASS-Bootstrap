@@ -1,0 +1,19 @@
+@import 'variables';
+
+.header {
+    width: 100%;
+    background: transparent;
+    
+    a {
+        color: $light;
+        // margin-left: 93px;
+    }
+    
+    a:hover {
+        color: white;
+    }
+    
+    &-logo {
+        width: 195px;
+    }
+}

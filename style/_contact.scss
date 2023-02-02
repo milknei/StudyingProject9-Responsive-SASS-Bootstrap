@@ -1,0 +1,78 @@
+@import 'variables';
+
+.contact {
+    position: relative;
+    width: 100%;
+    padding-bottom: 108px;
+    overflow: hidden;
+
+    &-lines {
+        position: absolute;
+        bottom: -350px;
+        right: 0;
+    }
+
+    &-container {
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &-title {
+        max-width: 300px;
+        flex-basis: 0;
+    }
+
+    &-description {
+        max-width: 400px;
+        font-size: 20px;
+        line-height: 33px;
+        color: white;
+    }
+
+    &-inst, &-number {
+        font-size: 32px;
+        line-height: 42px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        img {
+            width: 57px;
+        }
+    }
+
+    &-photo {
+        width: 354px;
+        height: 520px;
+        position: relative;
+        background: rgba(35, 114, 73, 1);
+
+        img {
+            position: absolute;
+            bottom: -30px;
+            right: -10px;
+            width: 450px;
+            height: 600px;
+        }
+
+        .we_have {
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            z-index: 100;
+        }
+    }
+}

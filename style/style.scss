@@ -1,0 +1,653 @@
+@import 'variables';
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url("../fonts/Montserrat/Montserrat-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #000;
+
+    * {
+        font-family: 'Montserrat Regular';
+    }
+}
+
+button {
+    border: none !important;
+    outline: none;
+}
+
+.logo-colored {
+    background: -webkit-linear-gradient(#237249, #35C66B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 1600px;
+    background: rgba(18, 21, 23, 1);
+}
+
+.we_have {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/we-have-bg.png') center center no-repeat;
+    background-size: contain;
+    font-weight: 500;
+    font-size: 39px;
+    line-height: 33px;
+    color: white; 
+
+    p {
+        position: relative;
+        top: 10px;
+        width: 100%;
+        max-width: 140px;
+        text-align: center;
+    }
+}
+
+.green-circle {
+    position: absolute;
+    width: 324px;
+    height: 324px;
+    background: linear-gradient(267.2deg, rgba(35, 114, 73, 0.55) 3.05%, rgba(53, 198, 107, 0.73) 40.73%);
+    filter: blur(87.75px);
+    z-index: 1;
+}
+
+.green-light-circle {
+    @extend .green-circle;
+    background: linear-gradient(267.2deg, rgba(35, 114, 73, 0.192) 3.05%, rgba(53, 198, 106, 0.291) 40.73%);
+}
+
+.navbar-toggler {
+    border: 1px solid #237249 !important;
+}
+
+@import 'header';
+@import 'cafe-section';
+@import 'delicious';
+@import 'new';
+@import 'events';
+@import 'contact';
+@import 'footer';
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .we_have {
+        width: 90px;
+        height: 90px;
+        font-size: 20px;
+        line-height: 22px;
+        color: white; 
+    
+        p {
+            position: relative;
+            top: 10px;
+            width: 100%;
+            max-width: 70px;
+            text-align: center;
+        }
+    }
+
+    * {
+        letter-spacing: -0.02em;
+    }
+
+    .header {        
+        &-logo {
+            width: 134px;
+        }
+    }
+    
+    .cafe-section {
+        padding: 0 25px;
+        padding-top: 50px;
+        overflow: hidden;
+        
+        * {
+            z-index: 10;
+        }
+        
+        .green-light-circle {
+            top: 500px !important;
+            left: 0;
+            z-index: 1;
+        }
+        
+        &-title {
+            font-size: 48px;
+            line-height: 109.47%;
+            margin-bottom: 35px;
+        }
+        
+        &-description {
+            font-size: 12px;
+            line-height: 163.47%;
+            margin-bottom: 35px;
+        }
+        
+        &-buttons {
+            &-select {
+                font-size: 16.0834px;
+                line-height: 146.47%;
+                padding: 13px 52px;
+                margin-right: 5px !important;
+            }
+            
+            &-more {
+                font-size: 16.0834px;
+                line-height: 146.47%;
+                padding: 13px 32px;
+            }
+        }
+        
+        &-stats {
+            
+            &-item {
+                width: 107px;
+                display: inline-block;
+                flex-grow: 0;
+            }
+            
+            &-number {
+                font-size: 41.5488px;
+                line-height: 109.47%;
+            }
+            
+            &-plus {
+                color: #35C66B;
+            }
+            
+            &-description {
+                font-size: 12px;
+                line-height: 144.47%;
+            }
+        }
+        
+        &-imgs {
+            order: -1;
+        }
+
+        &-art {
+            width: 255px;
+            height: 343px;
+            top: -60px;
+            left: 100px;
+        }
+        
+        &-lines {
+            width: 500px;
+            top: 40px;
+            left: 30px;
+            rotate: 10deg;
+        }
+        
+        .green-circle {
+            width: 10px;
+            top: 50px;
+            right: 70px;
+        }
+        
+        &-features {
+            position: relative;
+    
+            .we_have {
+                position: absolute;
+                top: -50px;
+                left: 230px;
+            }
+    
+            flex-direction: column;
+            gap: 25px;
+            border-radius: 26px;
+            padding: 20px 40px;
+            margin-top: 50px;
+            
+            .green-bg {
+                width: 85px;
+                height: 85px;
+            }
+    
+            &-container {
+                width: 208px;
+                text-align: center;
+            }
+    
+            &-container:nth-child(4) img {
+                height: 90px;
+                position: relative;
+                bottom: 0px;
+                right: 15px;
+            }
+            
+            &-container:nth-child(2) img {
+                height: 110px;
+                position: relative;
+                bottom: 8px;
+                right: 0px;
+            }
+            
+            &-container:nth-child(3) img {
+                height: 120px;
+                position: relative;
+                top: -10px;
+                right: 18px;
+            }
+            
+            &-image {
+                height: 110;
+            }
+            
+            &-title {
+                font-size: 18.5659px;
+                line-height: 163.47%;
+                margin-bottom: 5px;
+            }
+            
+            &-description {
+                max-width: 125px;
+                font-size: 11.6811px;
+                line-height: 163.47%;
+                margin: auto;
+            }
+        }
+    }
+    
+    .delicious {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        padding: 50px 23px;
+        margin-top: 100px;
+    
+        * {
+            z-index: 10;
+        }
+    
+        &-lines {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 475px;
+            height: 300px;
+            rotate: -20deg;
+            z-index: 0;
+        }
+    
+        &-container {
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        &-photo {
+            align-self: flex-start;
+            position: relative;
+            width: 163px;
+            height: 240px;
+            background: #237249;
+    
+            img {
+                bottom: -20px;
+                left: -10px;
+                width: 200px;
+                height: 300px;
+            }
+    
+            .we_have {
+                top: 50px;
+                left: 260px;
+                z-index: 100;
+            }
+        }
+    
+        &-content {
+            gap: 35px;
+        }
+    
+        &-title {
+            font-size: 48px;
+            line-height: 109.47%;
+            margin-top: 50px;
+        }
+    
+        &-description {
+            font-size: 14px;
+            line-height: 163.47%;
+        }
+    
+        &-clip {
+            width: 255px;
+            height: 166px;
+    
+            &-button {
+                font-size: 14.2319px;
+                line-height: 146.47%;
+                padding: 12px 24px;
+    
+                img {
+                    width: 17px;
+                }
+            }
+        }
+    }
+    
+    .new {
+        width: 100%;
+        padding: 0 23px;
+        padding-bottom: 50px;
+    
+        &-container {
+            width: 100%;
+        }
+    
+        &-content {
+            flex-direction: column;
+            gap: 45px;
+            margin-bottom: 40px;
+        }
+    
+        &-title {
+            flex-basis: 0;
+            font-size: 53.1415px;
+            line-height: 109.47%;
+        }
+    
+        &-description {
+            flex-basis: 0;
+            font-size: 13.2854px;
+            line-height: 163.47%;
+        }
+    
+        &-coffees {
+    
+            > * {
+                position: relative;
+                right: 320px;
+            }
+    
+            &-button {
+                background: transparent;
+                border: 2px solid rgb(35, 114, 73) !important;
+                border-radius: 10px;
+                padding: 12px 10px;
+    
+                img {
+                    width: 25px;
+                    height: 5px;
+                }
+            }
+        }
+    
+        &-card {
+            display: inline-block;
+            border-radius: 30px;
+            border: 2px solid rgba(218, 218, 218, 0.5);
+            text-align: center;
+            margin-right: 35px;
+            padding: 30px 25px 20px 25px;
+    
+            &-image {
+                width: 120px;
+                height: 120px;
+                position: relative;
+                background: linear-gradient(267.2deg, #237249 3.05%, #35C66B 75.72%);
+                box-shadow: 0px 5.02703px 51.527px rgba(0, 0, 0, 0.39);
+                border-radius: 50%;
+                margin: auto;
+                margin-bottom: 30px;
+    
+                img {
+                    width: 220px;
+                    height: 250px;
+                    position: absolute;
+                    top: -65px;
+                    left: -50px;
+                }
+            }
+    
+            &-title {
+                font-size: 21.1514px;
+                line-height: 163.47%;
+                margin-bottom: 5px;
+            }
+    
+            &-description {
+                min-width: 120px;
+                font-size: 13.3078px;
+                line-height: 163.47%;
+                margin-bottom: 5px;
+            }
+    
+            &-price {
+                font-size: 21.1514px;
+                line-height: 163.47%;
+            }
+    
+            &-ml {
+                font-size: 13px;
+                margin-left: 21px;
+            }
+    
+            &-button {
+                font-size: 11.4365px;
+                line-height: 146.47%;
+                padding: 9px 20px;
+            }
+        }
+    }
+    
+    .events {
+        position: relative;
+        overflow: hidden;
+        padding: 0 23px;
+    
+        &-lines {
+            display: none;
+        }
+        
+        .new-title {
+            width: 100%;
+            order: -1;
+        }
+
+        .new-description {
+            width: 100%;
+        }
+
+        &-container {
+            margin: auto;
+            padding-bottom: 0px;
+            z-index: 10;
+        }
+        
+        &-content {
+            box-sizing: border-box;
+            max-width: 275px;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 20px;
+            margin-left: 70px;
+        }
+
+        &-slider {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .new-coffees-button {
+            display: inline-block;
+            border-radius: 20px;
+            rotate: 180deg;
+        }
+    
+        &-cards {
+            gap: 10px;
+        }
+    
+        &-card {
+            justify-content: space-between;
+            gap: 0px;
+            border-radius: 17px;
+            padding: 25px 70px 10px 15px;
+    
+            &-title {
+                max-width: 140px;
+                font-size: 18.1836px;
+                line-height: 108.5%;
+    
+                &.wide {
+                    max-width: 295px;
+                }
+            }
+    
+            &-button {
+                font-size: 13.6377px;
+                line-height: 146.47%;
+                padding: 12px 30px;
+            }
+        }
+    }
+    
+    .contact {
+        overflow: hidden;
+        padding: 0 23px;
+        padding-top: 100px;
+        padding-bottom: 108px;
+    
+        &-lines {
+            width: 500px;
+            top:  40px;
+            right: 0;
+            rotate: 30deg;
+        }
+    
+        &-container {
+            flex-direction: column;
+        }
+    
+        &-content {
+            align-self: flex-start;
+            flex-direction: column;
+            gap: 30px;
+        }
+    
+        &-title {
+            font-size: 48px;
+            line-height: 109.47%;
+        }
+    
+        &-description {
+            max-width: 300px;
+            font-size: 14px;
+            line-height: 163.47%;
+        }
+    
+        &-inst, &-number {
+            font-size: 21.4375px;
+            line-height: 131.97%;
+    
+            img {
+                width: 38px;
+            }
+        }
+    
+        &-photo {
+            align-self: flex-end;
+            order: -1;
+            width: 160px;
+            height: 230px;
+            margin-bottom: 30px;
+    
+            img {
+                bottom: -15px;
+                right: -5px;
+                width: 200px;
+                height: 250px;
+            }
+    
+            .we_have {
+                top: 60px;
+                left: -150px;
+                z-index: 100;
+            }
+        }
+    }
+    
+    .footer {
+        padding: 21px 23px;
+    
+        &-container {
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 50px;
+        }
+    
+        &-upper {
+            flex-wrap: wrap;
+        }
+    
+        .header-logo {
+            margin: 0 !important;
+        }
+    
+        .new-coffees-button {
+            margin-bottom: 20px;
+        }
+
+        &-links {
+            order: 1;
+            justify-content: flex-start;
+            gap: 0px;
+            margin-right: 10px;
+        }
+
+        &-list {
+            min-width: 100px;
+            margin-bottom: 10px;
+        }
+    
+        &-link {
+            font-size: 15.0307px;
+            line-height: 18px;
+        }
+    
+        &-bottom {
+            align-items: center;
+        }
+    
+        &-number {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import 'variables';
+
+.footer {
+    width: 100%;
+    background: rgba(11, 12, 13, 1);
+    padding: 40px 0;
+
+    &-container {
+        width: 100%;
+        max-width: 1140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 50px;
+        margin: auto;
+    }
+
+    &-upper {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .header-logo {
+        margin: 0 !important;
+    }
+
+    &-links {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+
+    &-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &-link {
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(187, 179, 179, 0.43);
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+
+        &-title {
+            color: white;
+        }
+    }
+
+    .new-coffees-button {
+        rotate: 270deg;
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &-number {
+        font-size: 26px;
+        line-height: 32px;
+        background: -webkit-linear-gradient(#237249, #35C66B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

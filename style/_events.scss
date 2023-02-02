@@ -1,0 +1,99 @@
+@import 'variables';
+.events {
+    position: relative;
+
+    .new-coffees-button {
+        display: none;
+    }
+
+    &-lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &-container {
+        position: relative;
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
+        padding-bottom: 140px;
+        z-index: 10;
+    }
+    
+    &-content {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 65px;
+        margin-left: auto;
+    }
+
+    &-cards {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    &-card {
+        min-width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 45px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 30px;
+        padding: 44px 44px 25px 25px;
+
+        &-title {
+            max-width: 230px;
+            font-size: 32px;
+            color: white;
+
+            &.wide {
+                max-width: 295px;
+            }
+        }
+
+        &-button {
+            font-size: 24px;
+            padding: 20px 54px;
+        }
+
+        &:nth-child(1) {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+            background-image: url('../img/card-building.png');
+        }
+        
+        &:nth-child(2) {
+            grid-column: 4 / 7;
+            grid-row: 1 / 2;
+            background-image: url('../img/card-building.png');
+        }
+
+        &:nth-child(3) {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            background-image: url('../img/card-cup.png');
+        }
+
+        &:nth-child(4) {
+            grid-column: 3 / 5;
+            grid-row: 2 / 3;
+            background-image: url('../img/card-sturbucks.png');
+        }
+
+        &:nth-child(5) {
+            grid-column: 5 / 7;
+            grid-row: 2 / 3;
+            background-image: url('../img/card-working.png');
+        }
+    }
+}
